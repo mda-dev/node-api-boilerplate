@@ -3,7 +3,6 @@ import globals from 'globals'
 import tseslint from 'typescript-eslint'
 import json from '@eslint/json'
 import markdown from '@eslint/markdown'
-import css from '@eslint/css'
 import { defineConfig } from 'eslint/config'
 
 export default defineConfig([
@@ -13,24 +12,6 @@ export default defineConfig([
     extends: ['js/recommended'],
     languageOptions: { globals: globals.node },
     rules: {
-      'import/order': [
-        'warn',
-        {
-          groups: [
-            'builtin',
-            'external',
-            'internal',
-            'parent',
-            'sibling',
-            'index',
-          ],
-          'newlines-between': 'always',
-          alphabetize: {
-            order: 'asc',
-            caseInsensitive: true,
-          },
-        },
-      ],
       '@typescript-eslint/no-unused-vars': [
         'error',
         {
@@ -63,11 +44,5 @@ export default defineConfig([
     plugins: { markdown },
     language: 'markdown/gfm',
     extends: ['markdown/recommended'],
-  },
-  {
-    files: ['**/*.css'],
-    plugins: { css },
-    language: 'css/css',
-    extends: ['css/recommended'],
   },
 ])

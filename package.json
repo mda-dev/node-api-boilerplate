@@ -6,6 +6,7 @@
   "scripts": {
     "test": "jest",
     "dev": "nodemon src/index.ts",
+    "lint": "eslint ./src/**/*",
     "build": "tsc"
   },
   "keywords": [],
