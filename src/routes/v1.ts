@@ -1,8 +1,8 @@
 import { Router } from 'express'
 import type {
+  NextFunction,
   Request,
   Response,
-  NextFunction,
   Router as RouterType,
 } from 'express'
 
