@@ -1,6 +1,6 @@
-import { INTERNAL_SERVER_ERROR } from '@/constants/statusCodes'
-
 import { NextFunction, Request, Response } from 'express'
+
+import { INTERNAL_SERVER_ERROR } from '@/constants/statusCodes'
 
 export class ApiError extends Error {
   public code?: number

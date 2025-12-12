@@ -1,7 +1,7 @@
 import express, { Express } from 'express'
+
 import errorHandler from '@/middleware/errorHandler'
 import v1Router from '@/routes/v1'
-
 
 const app: Express = express()
 

@@ -6,9 +6,10 @@
   "scripts": {
     "test": "jest",
     "dev": "nodemon src/index.ts",
-    "lint": "eslint ./src/**/*",
-    "format": "prettier",
-    "build": "tsc"
+    "lint:eslint": "eslint ./src/**/* --fix",
+    "lint:ts": "tsc --noEmit",
+    "format": "prettier --write \"{src,test}/**/*.{js,ts}\"",
+    "build": "npm run lint:eslint && npm run format && tsc"
   },
   "keywords": [],
   "author": "",
